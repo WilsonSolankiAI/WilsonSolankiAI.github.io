@@ -5,487 +5,225 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Wilson Solanki — Senior Android Engineer</title>
   <meta name="description" content="Wilson Solanki — Senior Android Engineer. Certified Backbase Android Developer. Kotlin Multiplatform (KMP), Python AI agents, AI-assisted engineering." />
-  <link rel="icon" href="data:,">
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg: #0f1724;            /* deep navy */
-      --card: #0f1728;
-      --muted: #9aa4b2;
-      --accent: #18a0a6;        /* teal/cyan accent */
-      --accent-2: #6dd3c8;      /* lighter accent */
-      --glass: rgba(255,255,255,0.04);
-      --glass-2: rgba(255,255,255,0.02);
-      --text: #e6eef6;
-      --glass-border: rgba(255,255,255,0.06);
-      --success: #4ade80;
-      --danger: #fb7185;
-      --max-width: 1100px;
+      --bg:#0f1724;
+      --card:#0f1728;
+      --muted:#9aa4b2;
+      --accent:#18a0a6;
+      --accent-2:#6dd3c8;
+      --glass:rgba(255,255,255,0.04);
+      --glass-2:rgba(255,255,255,0.02);
+      --text:#e6eef6;
+      --border:rgba(255,255,255,0.06);
+      --max:1100px;
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
     body{
       margin:0;
-      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: linear-gradient(180deg, #071226 0%, #071427 60%);
+      font-family:Inter,system-ui,Arial;
+      background:linear-gradient(180deg,#071226,#071427);
       color:var(--text);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.5;
       padding:40px 20px;
       display:flex;
       justify-content:center;
     }
-    .container{
-      width:100%;
-      max-width:var(--max-width);
-    }
-
+    .container{max-width:var(--max);width:100%}
     header{
       display:flex;
       justify-content:space-between;
       align-items:center;
-      gap:16px;
       margin-bottom:28px;
     }
-    .brand{
-      display:flex;
-      gap:12px;
-      align-items:center;
-    }
+    .brand{display:flex;gap:12px;align-items:center}
     .logo{
-      width:56px;
-      height:56px;
-      display:grid;
-      place-items:center;
+      width:56px;height:56px;
+      display:grid;place-items:center;
       background:linear-gradient(135deg,var(--accent),var(--accent-2));
       border-radius:12px;
-      font-weight:800;
-      color:#04232b;
-      font-size:18px;
-      box-shadow: 0 6px 18px rgba(8,20,30,0.5);
+      font-weight:800;color:#04232b;
     }
-    .name{
-      display:flex;
-      flex-direction:column;
-      line-height:1;
-    }
-    .name h1{ margin:0; font-size:18px; font-weight:700; letter-spacing:-0.2px; }
-    .name p{ margin:0; color:var(--muted); font-size:13px}
-
-    nav{ display:flex; gap:14px; align-items:center; }
     nav a{
       color:var(--muted);
       text-decoration:none;
-      padding:8px 12px;
-      border-radius:10px;
+      margin-left:12px;
       font-weight:600;
-      font-size:14px;
     }
     nav a.primary{
-      background:linear-gradient(90deg, rgba(24,160,166,0.14), rgba(109,211,200,0.06));
-      color:var(--accent-2);
-      border:1px solid rgba(109,211,200,0.08);
-      box-shadow: 0 4px 12px rgba(8,20,30,0.35);
+      padding:8px 14px;
+      border-radius:10px;
+      background:linear-gradient(90deg,var(--accent),var(--accent-2));
+      color:#04232b;
     }
-
     main{
       display:grid;
-      grid-template-columns: 1fr 360px;
+      grid-template-columns:1fr 360px;
       gap:28px;
-      align-items:start;
     }
-
-    /* LEFT: content */
     .card{
-      background: linear-gradient(180deg,var(--glass),var(--glass-2));
+      background:linear-gradient(180deg,var(--glass),var(--glass-2));
+      border:1px solid var(--border);
       border-radius:14px;
       padding:22px;
-      border:1px solid var(--glass-border);
-      box-shadow: 0 8px 30px rgba(2,6,12,0.6);
     }
-
-    .hero{
-      display:flex;
-      gap:18px;
-      align-items:flex-start;
-    }
-    .hero-left{
-      flex:1;
-    }
-    .hero h2{
-      margin:0 0 8px 0;
-      font-size:26px;
-      letter-spacing:-0.4px;
-    }
-    .hero p.lead{
-      margin:0 0 14px 0;
-      color:var(--muted);
-      font-size:15px;
-    }
-    .badges{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px; }
-    .badge{
-      background:rgba(255,255,255,0.03);
-      color:var(--text);
+    h2{margin-top:0}
+    .badges span{
+      display:inline-block;
+      margin:6px 6px 0 0;
       padding:6px 10px;
       border-radius:999px;
-      font-weight:700;
+      background:rgba(255,255,255,0.03);
+      font-weight:600;
       font-size:13px;
-      border:1px solid rgba(255,255,255,0.03);
-    }
-    .cta{
-      display:flex;
-      gap:12px;
-      margin-top:6px;
     }
     .btn{
+      display:inline-block;
+      margin-top:14px;
       padding:10px 14px;
       border-radius:10px;
       font-weight:700;
-      font-size:14px;
-      border:none;
-      cursor:pointer;
       text-decoration:none;
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
     }
-    .btn-outline{
-      background:transparent;
-      color:var(--text);
-      border:1px solid rgba(255,255,255,0.06);
-    }
-    .btn-primary{
+    .btn.primary{
       background:linear-gradient(90deg,var(--accent),var(--accent-2));
       color:#04232b;
-      box-shadow: 0 6px 20px rgba(24,160,166,0.18);
     }
-
-    h3.section-title{
-      margin:0 0 10px 0;
-      display:flex;
-      align-items:center;
-      gap:10px;
-      font-size:16px;
+    .btn.outline{
+      border:1px solid var(--border);
+      color:var(--text);
+      margin-left:8px;
     }
-
-    .section{
-      margin-top:18px;
-    }
-
-    /* Experience list */
-    .exp-item{
-      display:flex;
-      justify-content:space-between;
-      gap:12px;
+    .section{margin-top:18px}
+    .exp{
+      margin-bottom:14px;
       padding:12px;
       border-radius:10px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
-      border:1px solid rgba(255,255,255,0.02);
-      margin-bottom:10px;
-    }
-    .exp-left{ flex:1 }
-    .exp-left h4{ margin:0; font-size:15px }
-    .exp-left p{ margin:6px 0 0 0; color:var(--muted); font-size:13px }
-    .exp-right{ text-align:right; color:var(--muted); font-size:13px; min-width:120px }
-
-    /* Projects grid */
-    .projects{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap:12px;
-      margin-top:8px;
-    }
-    .project{
-      padding:12px;
-      border-radius:10px;
-      border:1px solid rgba(255,255,255,0.03);
-      background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
-    }
-    .project h5{ margin:0 0 8px 0; font-size:14px }
-    .project p{ margin:0; color:var(--muted); font-size:13px }
-    .techs{ margin-top:8px; display:flex; gap:8px; flex-wrap:wrap }
-
-    .skill-pill{
-      padding:8px 10px;
-      border-radius:999px;
       background:rgba(255,255,255,0.02);
-      color:var(--muted);
-      font-weight:700;
-      font-size:12px;
-      border:1px solid rgba(255,255,255,0.02);
-    }
-
-    /* Right column */
-    aside{
-      display:flex;
-      flex-direction:column;
-      gap:18px;
-    }
-    .contact-card{
-      padding:16px;
-      border-radius:12px;
       border:1px solid rgba(255,255,255,0.03);
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
     }
-    .small{
+    .muted{color:var(--muted)}
+    aside .card{margin-bottom:18px}
+    footer{
+      margin-top:30px;
+      text-align:center;
       color:var(--muted);
       font-size:13px;
     }
-    .socials{ display:flex; gap:10px; margin-top:12px; }
-    .socials a{
-      display:inline-flex; align-items:center; justify-content:center;
-      width:44px; height:44px; border-radius:10px;
-      text-decoration:none; color:var(--text);
-      background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
-      border:1px solid rgba(255,255,255,0.03);
+    @media(max-width:900px){
+      main{grid-template-columns:1fr}
     }
-
-    footer{ margin-top:28px; text-align:center; color:var(--muted); font-size:13px; }
-
-    /* responsive */
-    @media (max-width:980px){
-      main{ grid-template-columns: 1fr; }
-      aside{ order:2 }
-    }
-
-    /* small touches */
-    .muted{ color:var(--muted) }
-    a.link{ color:var(--accent-2); font-weight:700; text-decoration:none }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo">WS</div>
-        <div class="name">
-          <h1>Wilson Solanki</h1>
-          <p>Senior Android Engineer · Certified Backbase Android Developer</p>
-        </div>
-      </div>
-      <nav>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact" class="primary">Contact / Resume</a>
-      </nav>
-    </header>
+<div class="container">
 
-    <main>
-      <!-- LEFT COLUMN -->
-      <div>
-        <section class="card hero" id="home">
-          <div class="hero-left">
-            <h2>Senior Android Engineer • Leader in Mobile Architecture & AI-Driven Dev</h2>
-            <p class="lead">
-              I design and deliver enterprise-grade Android applications (Backbase platform),
-              lead cross-platform Kotlin Multiplatform (KMP) initiatives, and build Python-based AI agents to
-              automate developer workflows. I combine pragmatic architecture, CI-driven delivery, and AI tooling to accelerate teams.
-            </p>
+<header>
+  <div class="brand">
+    <div class="logo">WS</div>
+    <div>
+      <strong>Wilson Solanki</strong><br/>
+      <span class="muted">Senior Android Engineer · Backbase Certified</span>
+    </div>
+  </div>
+  <nav>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact" class="primary">Contact</a>
+  </nav>
+</header>
 
-            <div class="badges">
-              <span class="badge">Certified Backbase Android Developer</span>
-              <span class="badge">Kotlin • KMP</span>
-              <span class="badge">Android Architecture</span>
-              <span class="badge">Python • AI Agents</span>
-            </div>
+<main>
+  <div>
+    <section class="card">
+      <h2>Senior Android Engineer & Mobile Architect</h2>
+      <p class="muted">
+        Certified Backbase Android Developer with strong experience in enterprise and fintech
+        mobile applications. I design scalable Android architectures, lead Kotlin Multiplatform (KMP)
+        initiatives, and build Python-based AI agents to enhance developer productivity.
+      </p>
 
-            <div class="cta">
-              <a class="btn btn-primary" href="#contact">Download Resume</a>
-              <a class="btn btn-outline" href="#projects">View Projects</a>
-            </div>
-          </div>
-
-          <div style="width:320px; text-align:right; min-width:220px;">
-            <div style="background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent); padding:14px; border-radius:12px; border:1px solid rgba(255,255,255,0.03)">
-              <p class="small" style="margin:0 0 10px 0">Location</p>
-              <p style="margin:0 0 10px 0; font-weight:700">Chicago, IL (Remote-friendly)</p>
-
-              <p class="small" style="margin:12px 0 8px 0">Open to</p>
-              <p style="margin:0">Senior / Lead Android roles · Mobile Architecture · Fintech & Enterprise · Remote / Hybrid</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="card section" id="experience">
-          <h3 class="section-title">Experience</h3>
-
-          <div class="exp-item">
-            <div class="exp-left">
-              <h4>Senior Android Engineer — (Company / Contract)</h4>
-              <p>Led architecture and development for enterprise Android apps integrated with Backbase. Introduced modularization and improved CI pipeline; drove cross-team technical decisions.</p>
-            </div>
-            <div class="exp-right">
-              <div>2022 — Present</div>
-              <div class="muted">Chicago</div>
-            </div>
-          </div>
-
-          <div class="exp-item">
-            <div class="exp-left">
-              <h4>Kotlin Multiplatform (KMP) — Cross-Platform Project</h4>
-              <p>Designed & delivered a production-ready KMP module sharing business logic across Android and iOS. Reduced duplicate code and stabilized release cadence.</p>
-            </div>
-            <div class="exp-right">
-              <div>2023 — 2024</div>
-              <div class="muted">Independent / Product</div>
-            </div>
-          </div>
-
-          <div class="exp-item">
-            <div class="exp-left">
-              <h4>AI Agent Developer — Python & Tooling</h4>
-              <p>Built multiple Python-based AI agents for developer automation (code generation, PR helpers, CI checks). Integrated ChatGPT, GitHub Copilot & Codex into workflows.</p>
-            </div>
-            <div class="exp-right">
-              <div>2023 — Present</div>
-              <div class="muted">Personal / Labs</div>
-            </div>
-          </div>
-        </section>
-
-        <section class="card section" id="projects">
-          <h3 class="section-title">Selected Projects</h3>
-
-          <div class="projects">
-            <div class="project">
-              <h5>Kotlin Multiplatform App (KMP)</h5>
-              <p class="muted">Shared business logic across platforms — modular architecture, dependency injection, unit-tested core modules.</p>
-              <div class="techs">
-                <span class="skill-pill">Kotlin</span>
-                <span class="skill-pill">KMP</span>
-                <span class="skill-pill">Kotlinx Serialization</span>
-                <span class="skill-pill">Koin</span>
-              </div>
-            </div>
-
-            <div class="project">
-              <h5>Android Fintech App (Backbase)</h5>
-              <p class="muted">Implemented secure, high-performance client features using Backbase mobile SDK, custom widgets, and transaction flows.</p>
-              <div class="techs">
-                <span class="skill-pill">Backbase</span>
-                <span class="skill-pill">Kotlin</span>
-                <span class="skill-pill">MVVM</span>
-                <span class="skill-pill">Coroutines</span>
-              </div>
-            </div>
-
-            <div class="project">
-              <h5>AI Developer Agents</h5>
-              <p class="muted">Python agents to automate PR generation, unit-test scaffolding, and contextual code suggestions; hooked to VS Code & CI.</p>
-              <div class="techs">
-                <span class="skill-pill">Python</span>
-                <span class="skill-pill">ChatGPT</span>
-                <span class="skill-pill">Codex</span>
-                <span class="skill-pill">GitHub Actions</span>
-              </div>
-            </div>
-
-            <div class="project">
-              <h5>Tooling: Codex + Copilot Integration</h5>
-              <p class="muted">Experimented with Copilot/Codex for code generation and applied guardrails to keep generated code consistent with codebase standards.</p>
-              <div class="techs">
-                <span class="skill-pill">Grok</span>
-                <span class="skill-pill">Copilot</span>
-                <span class="skill-pill">Factory AI</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="card section" id="skills">
-          <h3 class="section-title">Core Skills & Tools</h3>
-          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:8px;">
-            <span class="skill-pill">Android • Kotlin</span>
-            <span class="skill-pill">Kotlin Multiplatform (KMP)</span>
-            <span class="skill-pill">Backbase (Certified)</span>
-            <span class="skill-pill">MVVM • Clean Architecture</span>
-            <span class="skill-pill">Coroutines • Flow</span>
-            <span class="skill-pill">Python • AI Agents</span>
-            <span class="skill-pill">ChatGPT • Claude • Grok</span>
-            <span class="skill-pill">GitHub Copilot • Codex</span>
-            <span class="skill-pill">CI/CD • GitHub Actions</span>
-          </div>
-
-          <div class="section" style="display:flex; gap:12px; margin-top:14px; flex-wrap:wrap;">
-            <div style="flex:1; min-width:220px;">
-              <h4 style="margin:0 0 8px 0">Architecture & Leadership</h4>
-              <p class="muted" style="margin:0">Technical mentorship, code reviews, system design, defining module boundaries, release & build automation.</p>
-            </div>
-            <div style="flex:1; min-width:220px;">
-              <h4 style="margin:0 0 8px 0">AI & Automation</h4>
-              <p class="muted" style="margin:0">Agent design, prompt engineering, embedding model outputs into developer pipelines, safety & guardrails for generated code.</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="card section" id="certifications">
-          <h3 class="section-title">Certifications</h3>
-          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:8px;">
-            <div style="min-width:250px; padding:12px; border-radius:10px; background:rgba(255,255,255,0.01); border:1px solid rgba(255,255,255,0.03)">
-              <strong>Certified Backbase Android Developer</strong>
-              <div class="muted" style="margin-top:6px">Backbase — (Year)</div>
-            </div>
-
-            <!-- add more cert cards here -->
-          </div>
-        </section>
+      <div class="badges">
+        <span>Certified Backbase Android Developer</span>
+        <span>Android · Kotlin</span>
+        <span>Kotlin Multiplatform (KMP)</span>
+        <span>Python · AI Agents</span>
       </div>
 
-      <!-- RIGHT COLUMN -->
-      <aside>
-        <div class="contact-card">
-          <h3 style="margin:0 0 6px 0">Contact</h3>
-          <div class="small">Wilson Solanki</div>
-          <div style="margin-top:8px; font-weight:700">Email:</div>
-          <div class="muted">wilso589@michaels.com</div>
+      <a class="btn primary" href="#contact">Download Resume</a>
+      <a class="btn outline" href="#projects">View Projects</a>
+    </section>
 
-          <div style="margin-top:10px; font-weight:700">Location</div>
-          <div class="muted">Chicago, IL (Open to Remote)</div>
+    <section class="card section" id="experience">
+      <h3>Experience</h3>
 
-          <div style="margin-top:12px">
-            <a class="btn btn-primary" href="resume.pdf" download>Download Resume (PDF)</a>
-          </div>
+      <div class="exp">
+        <strong>Senior Android Engineer</strong>
+        <p class="muted">
+          Led Android architecture for enterprise-scale applications using Backbase.
+          Mentored developers, enforced clean architecture, and drove performance and stability improvements.
+        </p>
+      </div>
 
-          <div class="socials">
-            <a href="https://github.com/wilso589" title="GitHub" target="_blank" rel="noopener">GH</a>
-            <a href="https://www.linkedin.com/in/wilson-solanki/" title="LinkedIn" target="_blank" rel="noopener">in</a>
-            <a href="mailto:wilso589@michaels.com" title="Email">✉️</a>
-          </div>
-        </div>
+      <div class="exp">
+        <strong>Kotlin Multiplatform Engineer</strong>
+        <p class="muted">
+          Designed and delivered a production-ready KMP application sharing core business logic
+          across platforms.
+        </p>
+      </div>
 
-        <div class="contact-card">
-          <h3 style="margin:0 0 6px 0">Quick Links</h3>
-          <div style="display:flex; flex-direction:column; gap:8px; margin-top:10px">
-            <a class="link" href="#projects">Selected Projects</a>
-            <a class="link" href="#experience">Experience</a>
-            <a class="link" href="#certifications">Certifications</a>
-            <a class="link" href="https://github.com/wilso589" target="_blank">GitHub</a>
-            <a class="link" href="https://www.linkedin.com/in/wilson-solanki/" target="_blank">LinkedIn</a>
-          </div>
-        </div>
+      <div class="exp">
+        <strong>AI Agent Developer (Python)</strong>
+        <p class="muted">
+          Built AI agents for automation, coding assistance, and workflow optimization using
+          ChatGPT, Codex, Copilot, Claude, Grok, and Factory AI.
+        </p>
+      </div>
+    </section>
 
-        <div class="contact-card" id="contact">
-          <h3 style="margin:0 0 6px 0">Availability</h3>
-          <p class="muted" style="margin:0 0 8px 0">Open to Senior/Lead Android roles & consulting for fintech and enterprise mobile architecture.</p>
-          <div style="display:flex; gap:8px; margin-top:10px;">
-            <a class="btn btn-outline" href="mailto:wilso589@michaels.com">Email</a>
-            <a class="btn btn-primary" href="https://calendly.com/" target="_blank">Schedule</a>
-          </div>
-        </div>
-      </aside>
-    </main>
-
-    <footer>
-      © <span id="yr"></span> Wilson Solanki — Senior Android Engineer. Built with ♥ using modern web standards.
-    </footer>
+    <section class="card section" id="projects">
+      <h3>Projects</h3>
+      <ul class="muted">
+        <li>Kotlin Multiplatform Application (Shared Business Logic)</li>
+        <li>Enterprise Android App using Backbase SDK</li>
+        <li>Python-based AI Agents for Developer Automation</li>
+      </ul>
+    </section>
   </div>
 
-  <script>
-    // small helpers
-    document.getElementById('yr').textContent = new Date().getFullYear();
-  </script>
+  <aside>
+    <div class="card" id="contact">
+      <h3>Contact</h3>
+      <p><strong>Email:</strong><br/>wilson.solanki22@gmail.com</p>
+      <p><strong>Location:</strong><br/>Ahmedabad, Gujarat, India</p>
+
+      <a class="btn primary" href="resume.pdf" download>Download Resume</a>
+
+      <p class="section">
+        <a href="https://github.com/wilsonsolankiai" target="_blank">GitHub</a><br/>
+        <a href="https://www.linkedin.com/in/wilson-solanki/" target="_blank">LinkedIn</a>
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Availability</h3>
+      <p class="muted">
+        Open to Senior / Lead Android roles, Mobile Architecture,
+        Fintech & Enterprise projects (Remote / Hybrid).
+      </p>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  © <span id="year"></span> Wilson Solanki · Senior Android Engineer
+</footer>
+
+</div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
