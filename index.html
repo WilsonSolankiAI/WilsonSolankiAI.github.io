@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Wilson Solanki — Senior Android Engineer</title>
   <meta name="description" content="Wilson Solanki — Senior Android Engineer. Certified Backbase Android Developer. Kotlin Multiplatform (KMP), Python AI agents, AI-assisted engineering." />
+  <link rel="icon" href="data:,">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
   <style>
     :root{
       --bg:#0f1724;
@@ -16,20 +18,22 @@
       --glass:rgba(255,255,255,0.04);
       --glass-2:rgba(255,255,255,0.02);
       --text:#e6eef6;
-      --border:rgba(255,255,255,0.06);
-      --max:1100px;
+      --glass-border:rgba(255,255,255,0.06);
+      --max-width:1100px;
     }
     *{box-sizing:border-box}
     body{
       margin:0;
-      font-family:Inter,system-ui,Arial;
-      background:linear-gradient(180deg,#071226,#071427);
+      font-family:"Inter",system-ui,Arial;
+      background:linear-gradient(180deg,#071226 0%,#071427 60%);
       color:var(--text);
+      line-height:1.6;
       padding:40px 20px;
       display:flex;
       justify-content:center;
     }
-    .container{max-width:var(--max);width:100%}
+    .container{max-width:var(--max-width);width:100%}
+
     header{
       display:flex;
       justify-content:space-between;
@@ -47,15 +51,15 @@
     nav a{
       color:var(--muted);
       text-decoration:none;
-      margin-left:12px;
+      padding:8px 12px;
       font-weight:600;
     }
     nav a.primary{
-      padding:8px 14px;
+      background:linear-gradient(90deg,rgba(24,160,166,.14),rgba(109,211,200,.06));
       border-radius:10px;
-      background:linear-gradient(90deg,var(--accent),var(--accent-2));
-      color:#04232b;
+      color:var(--accent-2);
     }
+
     main{
       display:grid;
       grid-template-columns:1fr 360px;
@@ -63,9 +67,10 @@
     }
     .card{
       background:linear-gradient(180deg,var(--glass),var(--glass-2));
-      border:1px solid var(--border);
       border-radius:14px;
       padding:22px;
+      border:1px solid var(--glass-border);
+      box-shadow:0 8px 30px rgba(2,6,12,.6);
     }
     h2{margin-top:0}
     .badges span{
@@ -73,39 +78,39 @@
       margin:6px 6px 0 0;
       padding:6px 10px;
       border-radius:999px;
-      background:rgba(255,255,255,0.03);
-      font-weight:600;
+      background:rgba(255,255,255,.03);
       font-size:13px;
+      font-weight:600;
     }
     .btn{
       display:inline-block;
-      margin-top:14px;
       padding:10px 14px;
       border-radius:10px;
       font-weight:700;
       text-decoration:none;
+      margin-top:14px;
     }
     .btn.primary{
       background:linear-gradient(90deg,var(--accent),var(--accent-2));
       color:#04232b;
     }
     .btn.outline{
-      border:1px solid var(--border);
+      border:1px solid var(--glass-border);
       color:var(--text);
       margin-left:8px;
     }
     .section{margin-top:18px}
     .exp{
-      margin-bottom:14px;
       padding:12px;
+      margin-bottom:12px;
       border-radius:10px;
-      background:rgba(255,255,255,0.02);
-      border:1px solid rgba(255,255,255,0.03);
+      background:rgba(255,255,255,.02);
+      border:1px solid rgba(255,255,255,.03);
     }
     .muted{color:var(--muted)}
     aside .card{margin-bottom:18px}
     footer{
-      margin-top:30px;
+      margin-top:28px;
       text-align:center;
       color:var(--muted);
       font-size:13px;
@@ -115,6 +120,7 @@
     }
   </style>
 </head>
+
 <body>
 <div class="container">
 
@@ -123,7 +129,7 @@
     <div class="logo">WS</div>
     <div>
       <strong>Wilson Solanki</strong><br/>
-      <span class="muted">Senior Android Engineer · Backbase Certified</span>
+      <span class="muted">Senior Android Engineer · Certified Backbase Android Developer</span>
     </div>
   </div>
   <nav>
@@ -136,11 +142,11 @@
 <main>
   <div>
     <section class="card">
-      <h2>Senior Android Engineer & Mobile Architect</h2>
+      <h2>Senior Android Engineer • Mobile Architecture & AI-Driven Development</h2>
       <p class="muted">
-        Certified Backbase Android Developer with strong experience in enterprise and fintech
-        mobile applications. I design scalable Android architectures, lead Kotlin Multiplatform (KMP)
-        initiatives, and build Python-based AI agents to enhance developer productivity.
+        Senior Android Engineer and Certified Backbase Android Developer with experience
+        building enterprise-grade mobile applications. Specialized in Kotlin, Kotlin Multiplatform (KMP),
+        and AI-assisted development using Python-based agents.
       </p>
 
       <div class="badges">
@@ -160,15 +166,15 @@
       <div class="exp">
         <strong>Senior Android Engineer</strong>
         <p class="muted">
-          Led Android architecture for enterprise-scale applications using Backbase.
-          Mentored developers, enforced clean architecture, and drove performance and stability improvements.
+          Led Android development for enterprise and fintech applications using Backbase.
+          Owned architecture decisions, mentored developers, and ensured scalability and performance.
         </p>
       </div>
 
       <div class="exp">
         <strong>Kotlin Multiplatform Engineer</strong>
         <p class="muted">
-          Designed and delivered a production-ready KMP application sharing core business logic
+          Designed and delivered a production-ready KMP application enabling shared business logic
           across platforms.
         </p>
       </div>
@@ -176,8 +182,8 @@
       <div class="exp">
         <strong>AI Agent Developer (Python)</strong>
         <p class="muted">
-          Built AI agents for automation, coding assistance, and workflow optimization using
-          ChatGPT, Codex, Copilot, Claude, Grok, and Factory AI.
+          Built AI agents for automation and developer productivity using ChatGPT, Claude,
+          Grok, GitHub Copilot, Codex, and Factory AI.
         </p>
       </div>
     </section>
@@ -185,9 +191,9 @@
     <section class="card section" id="projects">
       <h3>Projects</h3>
       <ul class="muted">
-        <li>Kotlin Multiplatform Application (Shared Business Logic)</li>
-        <li>Enterprise Android App using Backbase SDK</li>
-        <li>Python-based AI Agents for Developer Automation</li>
+        <li>Kotlin Multiplatform Application (Shared Core Logic)</li>
+        <li>Enterprise Android Application (Backbase Platform)</li>
+        <li>Python-Based AI Agents for Development Automation</li>
       </ul>
     </section>
   </div>
@@ -195,8 +201,8 @@
   <aside>
     <div class="card" id="contact">
       <h3>Contact</h3>
-      <p><strong>Email:</strong><br/>wilson.solanki22@gmail.com</p>
-      <p><strong>Location:</strong><br/>Ahmedabad, Gujarat, India</p>
+      <p><strong>Email</strong><br/>wilson.solanki22@gmail.com</p>
+      <p><strong>Location</strong><br/>Ahmedabad, Gujarat, India (Open to Remote)</p>
 
       <a class="btn primary" href="resume.pdf" download>Download Resume</a>
 
@@ -209,8 +215,8 @@
     <div class="card">
       <h3>Availability</h3>
       <p class="muted">
-        Open to Senior / Lead Android roles, Mobile Architecture,
-        Fintech & Enterprise projects (Remote / Hybrid).
+        Open to Senior / Lead Android Engineer roles, Mobile Architecture,
+        and Enterprise / Fintech projects (Remote or Hybrid).
       </p>
     </div>
   </aside>
