@@ -1,235 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Wilson Solanki — Senior Android Engineer</title>
-  <meta name="description" content="Wilson Solanki — Senior Android Engineer. Certified Backbase Android Developer. Kotlin Multiplatform (KMP), Python AI agents, AI-assisted engineering." />
-  <link rel="icon" href="data:,">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wilson Solanki — AI Engineer | Senior Android Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Roboto', sans-serif; line-height: 1.6; color: #e0e0e0; background: #0a0a0f; min-height: 100vh; }
+        
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 80px; background: #0a0a0f; max-width: 1400px; margin: 0 auto; }
+        .logo { display: flex; align-items: center; gap: 12px; }
+        .logo-icon { width: 45px; height: 45px; background: #5eead4; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #0a0a0f; font-weight: bold; font-size: 1rem; }
+        .logo-text h1 { font-size: 1.5rem; color: #fff; font-weight: 600; }
+        .logo-text p { font-size: 1rem; color: #888; }
+        nav { display: flex; gap: 30px; align-items: center; }
+        nav a { color: #888; text-decoration: none; font-size: 0.95rem; transition: color 0.2s; }
+        nav a:hover { color: #fff; }
+        nav a.active { background: #1a1a2e; color: #fff; padding: 8px 16px; border-radius: 6px; }
 
-  <style>
-    :root{
-      --bg:#0f1724;
-      --card:#0f1728;
-      --muted:#9aa4b2;
-      --accent:#18a0a6;
-      --accent-2:#6dd3c8;
-      --glass:rgba(255,255,255,0.04);
-      --glass-2:rgba(255,255,255,0.02);
-      --text:#e6eef6;
-      --glass-border:rgba(255,255,255,0.06);
-      --max-width:1100px;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:"Inter",system-ui,Arial;
-      background:linear-gradient(180deg,#071226 0%,#071427 60%);
-      color:var(--text);
-      line-height:1.6;
-      padding:40px 20px;
-      display:flex;
-      justify-content:center;
-    }
-    .container{max-width:var(--max-width);width:100%}
+        .container { display: grid; grid-template-columns: 1fr 320px; gap: 30px; max-width: 1400px; margin: 0 auto; padding: 30px 80px; }
+        
+        .main-content { display: flex; flex-direction: column; gap: 25px; }
+        
+        .card { background: #1a1a24; border-radius: 12px; padding: 35px; border: 1px solid #2a2a3a; }
+        
+        .hero h2 { font-size: 1.8rem; color: #fff; margin-bottom: 20px; font-weight: 600; }
+        .hero p { color: #a0a0a0; margin-bottom: 25px; font-size: 0.95rem; }
+        .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 25px; }
+        .tag { background: #1a1a2e; color: #c0c0c0; padding: 8px 14px; border-radius: 6px; font-size: 0.85rem; border: 1px solid #2a2a3e; }
+        .buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+        .btn { padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: all 0.2s; display: inline-block; }
+        .btn-primary { background: #5eead4; color: #0a0a0f; }
+        .btn-primary:hover { background: #4fd1c5; }
+        .btn-secondary { background: transparent; color: #e0e0e0; border: 1px solid #3a3a4a; }
+        .btn-secondary:hover { border-color: #5eead4; color: #5eead4; }
 
-    header{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      margin-bottom:28px;
-    }
-    .brand{display:flex;gap:12px;align-items:center}
-    .logo{
-      width:56px;height:56px;
-      display:grid;place-items:center;
-      background:linear-gradient(135deg,var(--accent),var(--accent-2));
-      border-radius:12px;
-      font-weight:800;color:#04232b;
-    }
-    nav a{
-      color:var(--muted);
-      text-decoration:none;
-      padding:8px 12px;
-      font-weight:600;
-    }
-    nav a.primary{
-      background:linear-gradient(90deg,rgba(24,160,166,.14),rgba(109,211,200,.06));
-      border-radius:10px;
-      color:var(--accent-2);
-    }
+        .section-title { font-size: 1.4rem; color: #fff; margin-bottom: 25px; font-weight: 600; }
+        
+        .experience-item { margin-bottom: 25px; }
+        .experience-item:last-child { margin-bottom: 0; }
+        .experience-item h3 { color: #fff; font-size: 1.05rem; margin-bottom: 8px; font-weight: 600; }
+        .experience-item .period { color: #5eead4; font-size: 0.85rem; margin-bottom: 10px; }
+        .experience-item p { color: #a0a0a0; font-size: 0.9rem; }
+        .experience-item ul { color: #a0a0a0; margin-left: 18px; margin-top: 8px; font-size: 0.9rem; }
+        .experience-item li { margin-bottom: 5px; }
 
-    main{
-      display:grid;
-      grid-template-columns:1fr 360px;
-      gap:28px;
-    }
-    .card{
-      background:linear-gradient(180deg,var(--glass),var(--glass-2));
-      border-radius:14px;
-      padding:22px;
-      border:1px solid var(--glass-border);
-      box-shadow:0 8px 30px rgba(2,6,12,.6);
-    }
-    h2{margin-top:0}
-    .badges span{
-      display:inline-block;
-      margin:6px 6px 0 0;
-      padding:6px 10px;
-      border-radius:999px;
-      background:rgba(255,255,255,.03);
-      font-size:13px;
-      font-weight:600;
-    }
-    .btn{
-      display:inline-block;
-      padding:10px 14px;
-      border-radius:10px;
-      font-weight:700;
-      text-decoration:none;
-      margin-top:14px;
-    }
-    .btn.primary{
-      background:linear-gradient(90deg,var(--accent),var(--accent-2));
-      color:#04232b;
-    }
-    .btn.outline{
-      border:1px solid var(--glass-border);
-      color:var(--text);
-      margin-left:8px;
-    }
-    .section{margin-top:18px}
-    .exp{
-      padding:12px;
-      margin-bottom:12px;
-      border-radius:10px;
-      background:rgba(255,255,255,.02);
-      border:1px solid rgba(255,255,255,.03);
-    }
-    .muted{color:var(--muted)}
-    aside .card{margin-bottom:18px}
-    footer{
-      margin-top:28px;
-      text-align:center;
-      color:var(--muted);
-      font-size:13px;
-    }
-    @media(max-width:900px){
-      main{grid-template-columns:1fr}
-    }
-  </style>
+        .sidebar { display: flex; flex-direction: column; gap: 25px; }
+        
+        .sidebar-card { background: #1a1a24; border-radius: 12px; padding: 25px; border: 1px solid #2a2a3a; }
+        .sidebar-card h3 { color: #fff; font-size: 1.1rem; margin-bottom: 20px; font-weight: 600; }
+        .contact-item { margin-bottom: 18px; }
+        .contact-item:last-child { margin-bottom: 0; }
+        .contact-item label { color: #888; font-size: 0.85rem; display: block; margin-bottom: 4px; }
+        .contact-item p { color: #e0e0e0; font-size: 0.95rem; }
+        .sidebar-links { display: flex; flex-direction: column; gap: 8px; margin-top: 15px; }
+        .sidebar-links a { color: #5eead4; text-decoration: none; font-size: 0.9rem; }
+        .sidebar-links a:hover { text-decoration: underline; }
+
+        .project-item { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #1e1e2e; }
+        .project-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .project-item h3 { color: #fff; font-size: 1rem; margin-bottom: 10px; }
+        .project-item ul { color: #a0a0a0; margin-left: 18px; font-size: 0.9rem; }
+        .project-item li { margin-bottom: 5px; }
+
+        @media (max-width: 900px) {
+            .container { grid-template-columns: 1fr; }
+            header { flex-direction: column; gap: 20px; }
+        }
+    </style>
 </head>
-
 <body>
-<div class="container">
+    <header>
+        <div class="logo">
+            <div class="logo-icon">WS</div>
+            <div class="logo-text">
+                <h1>Wilson Solanki</h1>
+                <p>Senior Android Engineer · Certified Backbase Android Developer</p>
+            </div>
+        </div>
+        <nav>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact" class="active">Contact</a>
+        </nav>
+    </header>
 
-<header>
-  <div class="brand">
-    <div class="logo">WS</div>
-    <div>
-      <strong>Wilson Solanki</strong><br/>
-      <span class="muted">Senior Android Engineer · Certified Backbase Android Developer</span>
+    <div class="container">
+        <div class="main-content">
+            <section class="card hero">
+                <h2>Senior Android Engineer (12+ Years) | AI Engineer in Transition | AI Automation & Developer Productivity</h2>
+                <p>Senior Android Engineer with 12+ years of experience building enterprise-grade and fintech mobile applications. Certified Backbase Android Developer. Over the past 1+ year, actively transitioning toward an AI Engineer role by learning Python, modern AI tooling, and building production-ready AI agents used within the organization to automate engineering workflows.</p>
+                <div class="tags">
+                    <span class="tag">Certified Backbase Android Developer</span>
+                    <span class="tag">Android · Kotlin</span>
+                    <span class="tag">Kotlin Multiplatform (KMP)</span>
+                    <span class="tag">Python · AI Agents</span>
+                </div>
+                <div class="buttons">
+                    <a href="resume.pdf" download class="btn btn-primary">Download Resume</a>
+                    <a href="#projects" class="btn btn-secondary">View Projects</a>
+                </div>
+            </section>
+
+            <section class="card" id="experience">
+                <h2 class="section-title">Experience</h2>
+                <div class="experience-item">
+                    <h3>Senior Software Engineer — Michaels (TechBlocks Consulting Pvt. Ltd)</h3>
+                    <p class="period">2025 – Present</p>
+                    <ul>
+                        <li>Developing and maintaining large-scale retail Android applications</li>
+                        <li>Applying AI-assisted development techniques in day-to-day engineering work</li>
+                        <li>Designing and maintaining internal AI agents to automate developer workflows</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3>Lead Software Engineer (Fintech, Backbase) — MyState Bank & UBank</h3>
+                    <p class="period">2021 – 2025</p>
+                    <ul>
+                        <li>Led Android development for national-level banking applications with 100K+ users</li>
+                        <li>Architected scalable mobile systems using Kotlin, MVVM, and Jetpack</li>
+                        <li>Improved CI/CD pipelines and overall engineering efficiency</li>
+                        <li>Introduced AI-assisted tools for debugging, refactoring, and test generation</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3>Senior Software Engineer / Android Team Lead — Toyota Tsusho (T-Drive)</h3>
+                    <p class="period">2020</p>
+                    <ul>
+                        <li>Led a team of Android developers delivering enterprise-scale retail applications</li>
+                        <li>Focused on performance optimization, modular architecture, and scalability</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3>Senior Software Engineer / Android Engineer — Multiple Organizations</h3>
+                    <p class="period">2014 – 2020</p>
+                    <ul>
+                        <li>Built and maintained Android applications across fintech, retail, AR, and field-sales domains</li>
+                        <li>Owned full application lifecycle from architecture to production support</li>
+                        <li>Mentored junior engineers and led small-to-mid-sized Android teams</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="card" id="projects">
+                <h2 class="section-title">AI Engineering Projects (Internal, In-Use)</h2>
+                <div class="project-item">
+                    <h3>AI-Powered Git Pull Request Review Agent</h3>
+                    <ul>
+                        <li>Designed and built a Python-based AI agent that automatically reviews Git pull requests</li>
+                        <li>Generates code quality, architectural, and best-practice feedback</li>
+                        <li>Enables developers to directly post AI-generated review comments to PRs</li>
+                        <li>Actively used within the organization, reducing PR review turnaround time</li>
+                    </ul>
+                </div>
+                <div class="project-item">
+                    <h3>Android Localization & Encryption Automation Agent</h3>
+                    <ul>
+                        <li>Built an AI agent that converts raw strings into encrypted Android string.xml keys</li>
+                        <li>Automatically generates French translations using LLMs</li>
+                        <li>Provides a one-click workflow to update string.xml files with new keys and translations</li>
+                        <li>Significantly reduced manual localization effort and eliminated human errors</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <aside class="sidebar">
+            <div class="sidebar-card" id="contact">
+                <h3>Contact</h3>
+                <div class="contact-item">
+                    <label>Email</label>
+                    <p>wilson.solanki22@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <label>Location</label>
+                    <p>Ahmedabad, Gujarat, India (Open to Remote)</p>
+                </div>
+                <a href="resume.pdf" download class="btn btn-primary" style="width: 100%; text-align: center; margin-top: 10px;">Download Resume</a>
+                <div class="sidebar-links">
+                    <a href="https://github.com/wilsonsolankiai" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com/in/wilson-solanki" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+
+            <div class="sidebar-card">
+                <h3>Availability</h3>
+                <p style="color: #a0a0a0; font-size: 0.9rem;">Open to AI Engineer, Senior / Lead Android Engineer roles, Mobile Architecture, and Enterprise / Fintech projects (Remote or Hybrid).</p>
+            </div>
+
+            <div class="sidebar-card">
+                <h3>Education</h3>
+                <div class="contact-item">
+                    <label>MCA</label>
+                    <p>Gujarat Technological University</p>
+                </div>
+                <div class="contact-item">
+                    <label>BCA</label>
+                    <p>St. Xavier's College, Ahmedabad</p>
+                </div>
+            </div>
+
+            <div class="sidebar-card">
+                <h3>Certification</h3>
+                <p style="color: #e0e0e0; font-size: 0.9rem;">Certified Backbase Android Developer</p>
+            </div>
+        </aside>
     </div>
-  </div>
-  <nav>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact" class="primary">Contact</a>
-  </nav>
-</header>
-
-<main>
-  <div>
-    <section class="card">
-      <h2>Senior Android Engineer • Mobile Architecture & AI-Driven Development</h2>
-      <p class="muted">
-        Senior Android Engineer and Certified Backbase Android Developer with experience
-        building enterprise-grade mobile applications. Specialized in Kotlin, Kotlin Multiplatform (KMP),
-        and AI-assisted development using Python-based agents.
-      </p>
-
-      <div class="badges">
-        <span>Certified Backbase Android Developer</span>
-        <span>Android · Kotlin</span>
-        <span>Kotlin Multiplatform (KMP)</span>
-        <span>Python · AI Agents</span>
-      </div>
-
-      <a class="btn primary" href="#contact">Download Resume</a>
-      <a class="btn outline" href="#projects">View Projects</a>
-    </section>
-
-    <section class="card section" id="experience">
-      <h3>Experience</h3>
-
-      <div class="exp">
-        <strong>Senior Android Engineer</strong>
-        <p class="muted">
-          Led Android development for enterprise and fintech applications using Backbase.
-          Owned architecture decisions, mentored developers, and ensured scalability and performance.
-        </p>
-      </div>
-
-      <div class="exp">
-        <strong>Kotlin Multiplatform Engineer</strong>
-        <p class="muted">
-          Designed and delivered a production-ready KMP application enabling shared business logic
-          across platforms.
-        </p>
-      </div>
-
-      <div class="exp">
-        <strong>AI Agent Developer (Python)</strong>
-        <p class="muted">
-          Built AI agents for automation and developer productivity using ChatGPT, Claude,
-          Grok, GitHub Copilot, Codex, and Factory AI.
-        </p>
-      </div>
-    </section>
-
-    <section class="card section" id="projects">
-      <h3>Projects</h3>
-      <ul class="muted">
-        <li>Kotlin Multiplatform Application (Shared Core Logic)</li>
-        <li>Enterprise Android Application (Backbase Platform)</li>
-        <li>Python-Based AI Agents for Development Automation</li>
-      </ul>
-    </section>
-  </div>
-
-  <aside>
-    <div class="card" id="contact">
-      <h3>Contact</h3>
-      <p><strong>Email</strong><br/>wilson.solanki22@gmail.com</p>
-      <p><strong>Location</strong><br/>Ahmedabad, Gujarat, India (Open to Remote)</p>
-
-      <a class="btn primary" href="resume.pdf" download>Download Resume</a>
-
-      <p class="section">
-        <a href="https://github.com/wilsonsolankiai" target="_blank">GitHub</a><br/>
-        <a href="https://www.linkedin.com/in/wilson-solanki/" target="_blank">LinkedIn</a>
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Availability</h3>
-      <p class="muted">
-        Open to Senior / Lead Android Engineer roles, Mobile Architecture,
-        and Enterprise / Fintech projects (Remote or Hybrid).
-      </p>
-    </div>
-  </aside>
-</main>
-
-<footer>
-  © <span id="year"></span> Wilson Solanki · Senior Android Engineer
-</footer>
-
-</div>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
 </body>
 </html>
